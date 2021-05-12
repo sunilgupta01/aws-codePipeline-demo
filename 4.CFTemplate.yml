@@ -172,7 +172,7 @@ Resources:
     Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: Load balance allow port 80 traffic
-      VpcId: vpc-a20c99c9
+      VpcId: vpc-b5b26ede
       SecurityGroupIngress:
         CidrIp: 0.0.0.0/0
         FromPort: 80
@@ -187,9 +187,9 @@ Resources:
       SecurityGroups:
         - !Ref LoadBalancerSecGroup
       Subnets:
-        - subnet-0881d344
-        - subnet-250ab74e
-        - subnet-6b9e7416
+        - subnet-7ad91d11
+        - subnet-83e1d3f9
+        - subnet-1030aa5c
 
   LoadBalancerListener:
     Type: AWS::ElasticLoadBalancingV2::Listener
@@ -228,7 +228,7 @@ Parameters:
     Default: "PRIVATE"
   vpcEndpointId:
     Type: String
-    Default: "vpce-0b755cdacfad6407f"
+    Default: "vpce-0662a95f27aa8722d"
   EnvironmentName:
     Type: String
     Default: Prod
